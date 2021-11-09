@@ -10,14 +10,9 @@ function simpleTernaryPassword(password) {
 }
 
 function simpleAndAndPassword(password) {
-    if (password.length > 0 && password.length < 7) {
-        return "Weak";
-    }
-    return "Strong";
+    return password.length > 7 && "Strong" || "Weak";
 }
 
 function advancedPassword(password) {
     return password.length == 7 ? "Strong" : password.length < 7 ? "Weak" : /[A-Z]/.test(password) ? "Very Strong" : "Strong";
 }
-
-console.log(advancedPassword("123456789"));
