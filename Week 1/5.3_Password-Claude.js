@@ -17,5 +17,7 @@ function simpleAndAndPassword(password) {
 }
 
 function advancedPassword(password) {
-    return password.length == 7 ? "Strong" : password.length < 7 ? "Weak" : "Very Strong";
+    return password.length == 7 ? "Strong" : password.length < 7 ? "Weak" : /[A-Z]/.test(password) ? "Very Strong" : "Strong";
 }
+
+console.log(advancedPassword("123456789"));
