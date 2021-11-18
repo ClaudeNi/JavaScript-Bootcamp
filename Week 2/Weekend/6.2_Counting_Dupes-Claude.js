@@ -5,11 +5,15 @@ function dupes(str) {
     }, {})
     objArr = Object.entries(obj).filter(letter => letter[1] > 1);
     let nStr = `${objArr.length} #`;
-    objArr.forEach(letter => {
-        nStr += ` '${letter[0]}' occurs ${letter[1]} times`;
-        if (objArr.length > 1 && objArr[objArr.length - 1] != letter) {
-            nStr += " and";
-        }
-    })
+    if (objArr.length == 0) {
+        nStr += " no characters repeat"
+    } else {
+        objArr.forEach(letter => {
+            nStr += ` '${letter[0]}' occurs ${letter[1]} times`;
+            if (objArr.length > 1 && objArr[objArr.length - 1] != letter) {
+                nStr += " and";
+            }
+        })
+    }
     return nStr;
 }
