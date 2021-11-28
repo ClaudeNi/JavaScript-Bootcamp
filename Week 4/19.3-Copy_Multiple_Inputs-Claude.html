@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            border: 1px solid #000;
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+        }
+        ul li {
+            padding: 1rem;
+        }
+        input {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+        button {
+            padding: 1rem 2rem;
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <span>Text to copy:</span>
+    <span>123456</span>
+    <div class="box">
+        <ul>
+            <li><input type="textarea" maxlength="1" id="1"></li>
+            <li><input type="textarea" maxlength="1" id="2"></li>
+            <li><input type="textarea" maxlength="1" id="3"></li>
+            <li><input type="textarea" maxlength="1" id="4"></li>
+            <li><input type="textarea" maxlength="1" id="5"></li>
+            <li><input type="textarea" maxlength="1" id="6"></li>
+        </ul>
+        <button id="7" pass="123456" onclick="verifyCodeFunc()">Verify</button>
+    </div>
+    <script src="./19.3-Copy_Multiple_Inputs-Claude.js"></script>
+</body>
+</html>
