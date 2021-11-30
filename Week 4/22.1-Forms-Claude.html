@@ -40,7 +40,7 @@
             event.preventDefault();
             allInputs.forEach((el, index) => {
                 el.readOnly = true;
-                allConfirmTexts[index].textContent += el.value;
+                allConfirmTexts[index].textContent = el.value;
             });
             confirmDiv.style.display = "block";
         });
@@ -51,18 +51,10 @@
 
         changeBtn.addEventListener("click", () => {
             allInputs.forEach((el) => {
-                
                 el.readOnly = false;
             });
             confirmDiv.style.display = "none";
-            resetConfirmText();
         });
-
-        function resetConfirmText() {
-            allConfirmTexts.forEach((el) => {
-                el.textContent = "";
-            });
-        }
     </script>
 </body>
 </html>
